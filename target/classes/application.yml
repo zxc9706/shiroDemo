@@ -24,3 +24,6 @@ logging:
     #    root: debug
     org.springframework.boot: info
     com.zxc: debug
+
+server:
+  port: 8081

@@ -3,7 +3,7 @@ package com.zxc.demo.Utils;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class SecurityUtils {
+public class SecurityUtil {
 
     //依据JSON生成MD5摘要
     public static String toMD5(String plainText) {

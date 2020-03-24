@@ -2,12 +2,12 @@ package com.zxc.demo.Service;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.zxc.demo.mapper.UserMapper;
-import com.zxc.demo.Model.User;
-import com.zxc.demo.Utils.SecurityUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.util.Factory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Map;
+import java.util.List;
 
 @Service
 public class loginService {
@@ -17,12 +17,13 @@ public class loginService {
 
     public String login(String username,String password){
         String result = null;
-        Map userInfo = userMapper.getUserInfo(username, password, SecurityUtils.toMD5(password));
-        if (userInfo==null){
-            result = "账户不存在或密码错误！";
+        List list = userMapper.selectList(new EntityWrapper().eq("username", username).eq("locked", 0));
+        if (list.size()>0){
+
         }else {
-            result = "登陆成功！";
+            result = "用户不存在或者密码错误，请核对后登录!";
         }
+
         return result;
     }
 
