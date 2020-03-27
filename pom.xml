@@ -12,7 +12,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>demo</name>
 
-    <distributionManagement>
+    <!--<distributionManagement>
         <repository>
             <id>nexus-zxc</id>
             <name>zxc</name>
@@ -31,7 +31,7 @@
                 <enabled>true</enabled>
             </releases>
         </repository>
-    </repositories>
+    </repositories>-->
 
     <properties>
         <java.version>1.8</java.version>
@@ -44,12 +44,6 @@
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-spring</artifactId>
             <version>1.4.0</version>
-        </dependency>
-
-        <dependency>
-            <groupId>zxc.cccc</groupId>
-            <artifactId>cc</artifactId>
-            <version>0.0.1</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>

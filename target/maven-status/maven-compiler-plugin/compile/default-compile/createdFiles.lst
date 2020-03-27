@@ -1,0 +1,17 @@
+com\zxc\demo\Model\User.class
+com\zxc\demo\Service\PermissionService.class
+com\zxc\demo\Model\Role.class
+com\zxc\demo\Utils\SecurityUtil.class
+com\zxc\demo\Controller\UserController.class
+com\zxc\demo\Service\loginService.class
+com\zxc\demo\DemoApplication.class
+com\zxc\demo\mapper\UserMapper.class
+com\zxc\demo\mapper\PermissionMapper.class
+com\zxc\demo\Utils\StatusEnmus.class
+com\zxc\demo\mapper\RoleMapper.class
+com\zxc\demo\Service\RoleService.class
+com\zxc\demo\Controller\loginController.class
+com\zxc\demo\config\CustomRealm.class
+com\zxc\demo\Service\UserService.class
+com\zxc\demo\config\ShiroConfig.class
+com\zxc\demo\Utils\ResponseCode.class
