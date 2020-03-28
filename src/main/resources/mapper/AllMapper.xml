@@ -16,4 +16,25 @@
         (#{memo_title},#{memo},#{customer_name},NOW(),0)
     </insert>
 
+    <select id="getMemos" parameterType="map" resultType="map">
+        select id,memo_title,memo,customer_name,DATE_FORMAT(add_time,'%Y-%m-%d %H:%m:%s') as add_time
+        from zxc_memo
+        where customer_name = #{customer_name}
+        and del_state = 0
+    </select>
+
+    <update id="delMemo">
+        update zxc_memo set
+        del_state = 1
+        where id = #{id}
+    </update>
+
+    <update id="editMemo">
+        update zxc_memo set
+        memo_title = #{memo_title},
+        memo = #{memo}
+        where id = #{id}
+        and del_state = 0
+    </update>
+
 </mapper>

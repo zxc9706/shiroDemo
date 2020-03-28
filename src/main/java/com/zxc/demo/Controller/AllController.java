@@ -32,4 +32,22 @@ public class AllController {
         return add;
     }
 
+    @PostMapping("getMemos")
+    public ResponseEntity getMemos(@RequestBody Map map){
+        List<Map> memos = allService.getMemos(map);
+        return ResponseEntity.ok().body(memos);
+    }
+
+    @PostMapping("delMemo")
+    public ResponseEntity delMemo(@RequestBody Map map){
+        String memos = allService.delMemo(map);
+        return ResponseEntity.ok().body(memos);
+    }
+
+    @PostMapping("editMemo")
+    public ResponseEntity editMemo(@RequestBody Map map){
+        String memos = allService.editMemo(map);
+        return ResponseEntity.ok().body(memos);
+    }
+
 }

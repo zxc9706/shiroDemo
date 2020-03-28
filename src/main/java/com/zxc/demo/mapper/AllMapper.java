@@ -11,4 +11,10 @@ public interface AllMapper extends BaseMapper<All> {
     List<Map> getTab();
 
     Integer add(Map map);
+
+    List<Map> getMemos(Map map);
+
+    Integer delMemo(Map map);
+
+    Integer editMemo(Map map);
 }

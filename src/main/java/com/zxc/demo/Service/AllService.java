@@ -29,4 +29,32 @@ public class AllService {
         return result;
     }
 
+    public List<Map> getMemos(Map map) {
+
+        List<Map> memos = allMapper.getMemos(map);
+        return memos;
+
+    }
+
+    public String delMemo(Map map) {
+        String result = null;
+        Integer integer = allMapper.delMemo(map);
+        if (integer<1){
+            result = "删除失败";
+        }else {
+            result = "删除成功";
+        }
+        return result;
+    }
+
+    public String editMemo(Map map) {
+        String result = null;
+        Integer integer = allMapper.editMemo(map);
+        if (integer<1){
+            result = "修改失败";
+        }else {
+            result = "修改成功";
+        }
+        return result;
+    }
 }
