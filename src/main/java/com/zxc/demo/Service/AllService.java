@@ -18,4 +18,15 @@ public class AllService {
         return tab;
     }
 
+    public String add(Map map){
+        String result = null;
+        Integer add = allMapper.add(map);
+        if (add < 1){
+            result = "添加失败";
+        }else {
+            result = "添加成功";
+        }
+        return result;
+    }
+
 }

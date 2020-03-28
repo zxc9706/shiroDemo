@@ -9,4 +9,6 @@ import java.util.Map;
 public interface AllMapper extends BaseMapper<All> {
 
     List<Map> getTab();
+
+    Integer add(Map map);
 }

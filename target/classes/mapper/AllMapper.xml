@@ -9,4 +9,11 @@
         where del_state = 0
     </select>
 
+    <insert id="add" parameterType="map">
+        insert into zxc_memo
+        (memo,customer_name,add_time,del_state)
+        values
+        (#{memo},#{customer_name},NOW(),0)
+    </insert>
+
 </mapper>

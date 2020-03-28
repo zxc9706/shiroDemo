@@ -1,11 +1,10 @@
 package com.zxc.demo.Controller;
 
 import com.zxc.demo.Service.AllService;
+import org.apache.shiro.authz.annotation.RequiresAuthentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Map;
@@ -25,6 +24,12 @@ public class AllController {
     public ResponseEntity getTab(){
         List<Map> tab = allService.getTab();
         return ResponseEntity.ok().body(tab);
+    }
+
+    @PostMapping("/add")
+    public String add(@RequestBody Map map){
+        String add = allService.add(map);
+        return add;
     }
 
 }
