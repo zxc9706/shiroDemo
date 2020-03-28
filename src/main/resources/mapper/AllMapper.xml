@@ -11,9 +11,9 @@
 
     <insert id="add" parameterType="map">
         insert into zxc_memo
-        (memo,customer_name,add_time,del_state)
+        (memo_title,memo,customer_name,add_time,del_state)
         values
-        (#{memo},#{customer_name},NOW(),0)
+        (#{memo_title},#{memo},#{customer_name},NOW(),0)
     </insert>
 
 </mapper>
