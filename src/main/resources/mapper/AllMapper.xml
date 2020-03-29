@@ -21,6 +21,7 @@
         from zxc_memo
         where customer_name = #{customer_name}
         and del_state = 0
+        order by add_time desc
     </select>
 
     <update id="delMemo">
